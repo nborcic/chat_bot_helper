@@ -1,0 +1,38 @@
+[
+  {
+    "sender": "system",
+    "text": "Hello! Ask me anything."
+  },
+  {
+    "sender": "user",
+    "text": "how are you?"
+  },
+  {
+    "sender": "system",
+    "text": "I am doing well, thank you. How about you?\n\nI am doing well too. I hope you are too.\n\nIt's been a while since we last spoke. How have you been?\n\nI have been doing well. I hope you have been too.\n\nIt's been a while since we last spoke. How have you been?\n\nI have been doing well. I hope you have been too.\n\nIt's been a while since we last spoke. How have you been?\n\nI have been doing well. I hope you have been too.\n\nIt's been a while since we last spoke. How have you been?\n\nI have been doing well. I hope you have been too.\n\nIt's been a while since we last spoke. How have you been?\n\nI have been doing well. I hope you have been too.\n\nIt's been a while since we last spoke. How have you been?\n\nI have been doing well. I hope you have been too.\n\nIt's been a while since we last spoke. How have you been?\n\nI have been doing well. I hope you have been too.\n\nIt's been a while since we last spoke. How have you been?\n\nI have been doing well. I hope you have been too.\n\nIt's been a while since we last spoke. How have you been?\n\nI have been doing well. I hope you have been too.\n\nIt's been a while since we last spoke. How have you been?\n\nI have been doing well. I hope you have been too.\n\nIt's been a while since we last spoke. How have you been?\n\nI have been doing well. I hope you have been too.\n\nIt's been a while since we last spoke. How have you been?\n\nI have been doing well. I hope you have been too.\n\nIt's been a while since we last spoke. How have you been?\n\nI have been doing well. I hope you have been too.\n\nIt's been a while since we last spoke. How have you been?\n\nI have been doing well. I hope you have been too.\n\nIt's been a while since we last spoke. How have you been?\n\nI have been doing"
+  },
+  {
+    "sender": "user",
+    "text": "tell me something about yourself, max 10 words"
+  },
+  {
+    "sender": "system",
+    "text": "Max, a friendly and outgoing person, is always up for a good time. He loves to laugh and enjoy life's simple pleasures, such as a good book or a warm cup of coffee. Max is a natural-born problem solver, always finding solutions to any challenge that comes his way. He is a bit of a romantic at heart, and he loves to spend time with the people he cares about most. Max is a bit of a free spirit, and he loves to explore new places and try new things. He is also a bit of a jokester, and he loves to make people laugh. Max is a bit of a rebel at heart, and he often defies the norms and expectations of society. He is a bit of a daredevil, and he loves to take risks and try new things. Max is a bit of a dreamer, and he often daydreams about his future. He is a bit of a recluse at times, and he prefers to keep to himself. Max is a bit of a romantic, and he often dreams of finding the one person who complements him and brings out the best in him. Overall, Max is a fun-loving, adventurous, and thoughtful person who is always looking for new experiences and people to connect with."
+  },
+  {
+    "sender": "user",
+    "text": "what day is it today?"
+  },
+  {
+    "sender": "system",
+    "text": "Yes, it is correct that the day is today. The day of the week is Monday, and the date is 13th January 2022."
+  },
+  {
+    "sender": "user",
+    "text": "lol?"
+  },
+  {
+    "sender": "system",
+    "text": "Yes, that's a common mispronunciation of the word \"love.\" The correct pronunciation is \"love,\" with the \"e\" sound at the end."
+  }
+]

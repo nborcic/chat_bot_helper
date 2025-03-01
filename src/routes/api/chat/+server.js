@@ -1,26 +1,37 @@
-
+import { HUGGINGFACE_API_KEY } from '$env/static/private';
+import { HfInference } from "@huggingface/inference";
+import fs from "fs";
+import path from "path"
 
 export async function POST({ request }) {
     const { message } = await request.json();
-
-    const response = await fetch(
-        "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct",
-        {
-            headers: { Authorization: "HUGGINGFACE_API_KEY" },
-            method: "POST",
-            body: JSON.stringify({ inputs: message }),
-        }
-    );
-
-    const text = await response.text();
-    console.log("Hugging Face Response:", text);
-
+    if (!message) {
+        return new Response(JSON.stringify({ error: "Message is required" }), { status: 400 });
+    }
     try {
-        const data = JSON.parse(text);
-        console.log("dataa", data);
+        const client = new HfInference(HUGGINGFACE_API_KEY)
+        const chatCompletion = await client.chatCompletion({
+            model: "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+            messages: [
 
-        return new Response(JSON.stringify({ reply: data[0]?.generated_text || "I don't know." }));
+                { role: "user", content: message }
+            ],
+            temperature: 0.5,
+            max_tokens: 512,
+            top_p: 0.7
+        });
+        const res = chatCompletion.choices[0].message.content;
+        const filePath = path.resolve('src/lib/savedMessages.json');
+        const existingMessages = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+        const newMessages = [
+            { sender: 'user', text: message },
+            { sender: 'system', text: res }
+        ];
+        existingMessages.push(...newMessages);
+        fs.writeFileSync(filePath, JSON.stringify(existingMessages, null, 2));
+        return new Response(JSON.stringify({ messages: res || "I don't know." }));
     } catch (error) {
-        return new Response(JSON.stringify({ reply: "Error processing response from API." }));
+        console.error("Fetch error:", error);
+        return new Response(JSON.stringify({ error: "Failed to fetch response from API" }), { status: 500 });
     }
 }
