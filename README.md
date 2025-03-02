@@ -1,4 +1,5 @@
-# Chat Bot Helper
+# AI Chat Bot Helper
 
 ## Overview
-Chat Bot Helper is a project designed to assist in the development and deployment of chatbots.
+ChatBot AI Helper is a blank page with a small blue bubble in the bottom-right corner, ready to be inserted in any project. App 
+is designed to assist in developing and deploying AI chatbot helper tools for information at hand.
